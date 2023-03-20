@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230319 16:47:44.447" rpa="false" schemaversion="3">
+<suite id="s1" name="Evenement invalide" source="c:\users\Ronny\Créer_un_nouvel_élement_de_liste_dévénements\Script\Evenement_invalide.robot">
+<kw name="Open browser login and preconditions for nominal" library="Keywords" type="SETUP">
+<kw name="Login" library="Keywords">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<arg>${vUsername}</arg>
+<arg>${vPassword}</arg>
+<kw name="Set Selenium Timeout" library="Selenium2Library">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20230319 16:47:44.679" endtime="20230319 16:47:44.679"/>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<msg timestamp="20230319 16:47:44.679" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8087/share/page'.</msg>
+<status status="PASS" starttime="20230319 16:47:44.679" endtime="20230319 16:47:49.424"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230319 16:47:49.424" endtime="20230319 16:47:49.546"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_UserName}</arg>
+<arg>${vUsername}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230319 16:47:49.547" level="INFO">Typing text '1670279' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230319 16:47:49.546" endtime="20230319 16:47:49.630"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_Password}</arg>
+<arg>${vPassword}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230319 16:47:49.631" level="INFO">Typing text '12345678' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230319 16:47:49.631" endtime="20230319 16:47:49.708"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${btn_Login}</arg>
+<doc>Clicks button identified by ``locator``.</doc>
+<msg timestamp="20230319 16:47:49.708" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Connexion')]'.</msg>
+<status status="PASS" starttime="20230319 16:47:49.708" endtime="20230319 16:47:51.057"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${link_HeaderUserMenu}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 16:47:51.057" endtime="20230319 16:47:51.078"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_acceuil}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 16:47:51.078" level="INFO">Clicking element '//a[normalize-space()='Accueil']'.</msg>
+<status status="PASS" starttime="20230319 16:47:51.078" endtime="20230319 16:47:51.507"/>
+</kw>
+<status status="PASS" starttime="20230319 16:47:44.678" endtime="20230319 16:47:51.507"/>
+</kw>
+<status status="PASS" starttime="20230319 16:47:44.678" endtime="20230319 16:47:51.507"/>
+</kw>
+<test id="s1-t1" name="cas 1" line="22">
+<kw name="Créer un nouvel élement de liste d'événements invalides" library="Keywords">
+<arg>${EMPTY}</arg>
+<arg>12323</arg>
+<arg>bois-de-boulogne</arg>
+<arg>Liste de tâches</arg>
+<kw name="Set Selenium Timeout" library="Selenium2Library">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20230319 16:47:51.509" endtime="20230319 16:47:51.511"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_sites}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 16:47:51.511" level="INFO">Clicking element 'id=HEADER_SITES_MENU_text'.</msg>
+<status status="PASS" starttime="20230319 16:47:51.511" endtime="20230319 16:47:51.565"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 16:47:56.567" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230319 16:47:51.566" endtime="20230319 16:47:56.567"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${lnk_site}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 16:47:56.567" level="INFO">Clicking element 'xpath=//a[@title='Mes sites']'.</msg>
+<status status="PASS" starttime="20230319 16:47:56.567" endtime="20230319 16:47:57.011"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${lblutilisateur}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 16:47:57.012" endtime="20230319 16:47:57.036"/>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<arg>${lblutilisateur}</arg>
+<arg>Listes des sites de l'utilisateur</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230319 16:47:57.055" level="INFO">Element 'xpath=//div[@id='HEADER_TITLE_BAR']//div[@class='alfresco-layout-LeftAndRight__left']' contains text 'Listes des sites de l'utilisateur'.</msg>
+<status status="PASS" starttime="20230319 16:47:57.036" endtime="20230319 16:47:57.056"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 16:48:02.057" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230319 16:47:57.056" endtime="20230319 16:48:02.057"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${lnk_SiteCreer_1}${vtitreSite}${lnk_SiteCreer_2}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 16:48:02.057" level="INFO">Clicking element 'xpath=//a[@href='/share/page/site/bois-de-boulogne']'.</msg>
+<status status="PASS" starttime="20230319 16:48:02.057" endtime="20230319 16:48:03.135"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230319 16:48:08.137" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230319 16:48:03.135" endtime="20230319 16:48:08.137"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_listesdonne}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 16:48:08.137" endtime="20230319 16:48:08.160"/>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<arg>${btn_listesdonne}</arg>
+<arg>Listes de données</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230319 16:48:08.179" level="INFO">Element 'xpath=//a[@title='Listes de données']' contains text 'Listes de données'.</msg>
+<status status="PASS" starttime="20230319 16:48:08.160" endtime="20230319 16:48:08.179"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_listesdonne}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 16:48:08.180" level="INFO">Clicking element 'xpath=//a[@title='Listes de données']'.</msg>
+<status status="PASS" starttime="20230319 16:48:08.180" endtime="20230319 16:48:09.522"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_nouvellelistes}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 16:48:09.522" endtime="20230319 16:48:09.543"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_nouvellelistes}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 16:48:09.544" level="INFO">Clicking element 'id=template_x002e_datalists_x002e_data-lists_x0023_default-newListButton-button'.</msg>
+<status status="PASS" starttime="20230319 16:48:09.543" endtime="20230319 16:48:09.579"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${opt_listevenement}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 16:48:09.579" endtime="20230319 16:48:09.814"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_type_liste_part_1}${v_Type}${btn_type_liste_part_2}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 16:48:09.815" level="INFO">Clicking element 'xpath=//a[./text()="Liste de tâches"]'.</msg>
+<status status="PASS" starttime="20230319 16:48:09.814" endtime="20230319 16:48:09.855"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_titre}</arg>
+<arg>${vTitre}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230319 16:48:09.855" level="INFO">Typing text '' into text field 'id=template_x002e_datalists_x002e_data-lists_x0023_default-newList_prop_cm_title'.</msg>
+<status status="PASS" starttime="20230319 16:48:09.855" endtime="20230319 16:48:09.919"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_description}</arg>
+<arg>${vDescription}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230319 16:48:09.920" level="INFO">Typing text '12323' into text field 'id=template_x002e_datalists_x002e_data-lists_x0023_default-newList_prop_cm_description'.</msg>
+<status status="PASS" starttime="20230319 16:48:09.919" endtime="20230319 16:48:09.989"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${btn_Enregister}</arg>
+<doc>Clicks button identified by ``locator``.</doc>
+<msg timestamp="20230319 16:48:09.989" level="INFO">Clicking button 'xpath=(//button[normalize-space()='Enregistrer'])[1]'.</msg>
+<status status="PASS" starttime="20230319 16:48:09.989" endtime="20230319 16:48:10.045"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_fermer_liste}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 16:48:10.046" level="INFO">Clicking element '//a[@class='container-close']'.</msg>
+<status status="PASS" starttime="20230319 16:48:10.046" endtime="20230319 16:48:10.087"/>
+</kw>
+<status status="PASS" starttime="20230319 16:47:51.508" endtime="20230319 16:48:10.088"/>
+</kw>
+<status status="PASS" starttime="20230319 16:47:51.507" endtime="20230319 16:48:10.088"/>
+</test>
+<kw name="Logout" library="Keywords" type="TEARDOWN">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${link_HeaderUserMenu}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 16:48:10.090" endtime="20230319 16:48:10.106"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${link_HeaderUserMenu}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 16:48:10.106" level="INFO">Clicking element 'id=HEADER_USER_MENU_POPUP'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20230319 16:48:11.282" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-54.png"&gt;&lt;img src="selenium-screenshot-54.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230319 16:48:11.147" endtime="20230319 16:48:11.283"/>
+</kw>
+<msg timestamp="20230319 16:48:11.283" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="dijitReset dijitInline dijitMenuItem dijitMenuItemLabel dijitPopupMenuItem alfresco-menus-AlfMenuBarPopup" data-dojo-attach-point="focusNode" role="menuitem" tabindex="-1" id="HEADER_USER_MENU_POPUP" aria-label="Joseph Ronaldson Belizaire " widgetid="HEADER_USER_MENU_POPUP" aria-haspopup="true" style="user-select: none;"&gt;...&lt;/div&gt; is not clickable at point (1160, 14). Other element would receive the click: &lt;div class="mask" id="template_x002e_datalists_x002e_data-lists_x0023_default-newList-dialog_mask" style="z-index: 3; height: 700px; width: 1519px; display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=111.0.5563.65)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00C7DCE3]
+	(No symbol) [0x00C139D1]
+	(No symbol) [0x00B24DA8]
+	(No symbol) [0x00B552EA]
+	(No symbol) [0x00B53BBA]
+	(No symbol) [0x00B51EFB]
+	(No symbol) [0x00B51027]
+	(No symbol) [0x00B48D05]
+	(No symbol) [0x00B6AECC]
+	(No symbol) [0x00B48726]
+	(No symbol) [0x00B6B224]
+	(No symbol) [0x00B7D57C]
+	(No symbol) [0x00B6ACC6]
+	(No symbol) [0x00B46F68]
+	(No symbol) [0x00B480CD]
+	GetHandleVerifier [0x00EF3832+2506274]
+	GetHandleVerifier [0x00F29794+2727300]
+	GetHandleVerifier [0x00F2E36C+2746716]
+	GetHandleVerifier [0x00D26690+617600]
+	(No symbol) [0x00C1C712]
+	(No symbol) [0x00C21FF8]
+	(No symbol) [0x00C220DB]
+	(No symbol) [0x00C2C63B]
+	BaseThreadInitThunk [0x768D7D69+25]
+	RtlInitializeExceptionChain [0x775AB74B+107]
+	RtlClearBits [0x775AB6CF+191]
+</msg>
+<status status="FAIL" starttime="20230319 16:48:10.106" endtime="20230319 16:48:11.287"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${link_HeaderDeconnexion}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20230319 16:48:16.500" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-55.png"&gt;&lt;img src="selenium-screenshot-55.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230319 16:48:16.363" endtime="20230319 16:48:16.500"/>
+</kw>
+<msg timestamp="20230319 16:48:16.500" level="FAIL">Element 'id=HEADER_USER_MENU_LOGOUT_text' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20230319 16:48:11.287" endtime="20230319 16:48:16.502"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${link_HeaderDeconnexion}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 16:48:16.502" level="INFO">Clicking element 'id=HEADER_USER_MENU_LOGOUT_text'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20230319 16:48:16.648" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-56.png"&gt;&lt;img src="selenium-screenshot-56.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230319 16:48:16.519" endtime="20230319 16:48:16.648"/>
+</kw>
+<msg timestamp="20230319 16:48:16.648" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=111.0.5563.65)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00C7DCE3]
+	(No symbol) [0x00C139D1]
+	(No symbol) [0x00B24C70]
+	(No symbol) [0x00B510D6]
+	(No symbol) [0x00B48D05]
+	(No symbol) [0x00B6AECC]
+	(No symbol) [0x00B48726]
+	(No symbol) [0x00B6B224]
+	(No symbol) [0x00B7D57C]
+	(No symbol) [0x00B6ACC6]
+	(No symbol) [0x00B46F68]
+	(No symbol) [0x00B480CD]
+	GetHandleVerifier [0x00EF3832+2506274]
+	GetHandleVerifier [0x00F29794+2727300]
+	GetHandleVerifier [0x00F2E36C+2746716]
+	GetHandleVerifier [0x00D26690+617600]
+	(No symbol) [0x00C1C712]
+	(No symbol) [0x00C21FF8]
+	(No symbol) [0x00C220DB]
+	(No symbol) [0x00C2C63B]
+	BaseThreadInitThunk [0x768D7D69+25]
+	RtlInitializeExceptionChain [0x775AB74B+107]
+	RtlClearBits [0x775AB6CF+191]
+</msg>
+<status status="FAIL" starttime="20230319 16:48:16.502" endtime="20230319 16:48:16.650"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230319 16:48:16.650" endtime="20230319 16:48:18.898"/>
+</kw>
+<status status="FAIL" starttime="20230319 16:48:10.089" endtime="20230319 16:48:18.899">Several failures occurred:
+
+1) ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="dijitReset dijitInline dijitMenuItem dijitMenuItemLabel dijitPopupMenuItem alfresco-menus-AlfMenuBarPopup" data-dojo-attach-point="focusNode" role="menuitem" tabindex="-1" id="HEADER_USER_MENU_POPUP" aria-label="Joseph Ronaldson Belizaire " widgetid="HEADER_USER_MENU_POPUP" aria-haspopup="true" style="user-select: none;"&gt;...&lt;/div&gt; is not clickable at point (1160, 14). Other element would receive the click: &lt;div class="mask" id="template_x002e_datalists_x002e_data-lists_x0023_default-newList-dialog_mask" style="z-index: 3; height: 700px; width: 1519px; display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=111.0.5563.65)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00C7DCE3]
+	(No symbol) [0x00C139D1]
+	(No symbol) [0x00B24DA8]
+	(No symbol) [0x00B552EA]
+	(No symbol) [0x00B53BBA]
+	(No symbol) [0x00B51EFB]
+    [ Message content over the limit has been removed. ]
+	(No symbol) [0x00B510D6]
+	(No symbol) [0x00B48D05]
+	(No symbol) [0x00B6AECC]
+	(No symbol) [0x00B48726]
+	(No symbol) [0x00B6B224]
+	(No symbol) [0x00B7D57C]
+	(No symbol) [0x00B6ACC6]
+	(No symbol) [0x00B46F68]
+	(No symbol) [0x00B480CD]
+	GetHandleVerifier [0x00EF3832+2506274]
+	GetHandleVerifier [0x00F29794+2727300]
+	GetHandleVerifier [0x00F2E36C+2746716]
+	GetHandleVerifier [0x00D26690+617600]
+	(No symbol) [0x00C1C712]
+	(No symbol) [0x00C21FF8]
+	(No symbol) [0x00C220DB]
+	(No symbol) [0x00C2C63B]
+	BaseThreadInitThunk [0x768D7D69+25]
+	RtlInitializeExceptionChain [0x775AB74B+107]
+	RtlClearBits [0x775AB6CF+191]</status>
+</kw>
+<doc>Test nominal creer un evenement dans la liste</doc>
+<status status="FAIL" starttime="20230319 16:47:44.452" endtime="20230319 16:48:18.899">Suite teardown failed:
+Several failures occurred:
+
+1) ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="dijitReset dijitInline dijitMenuItem dijitMenuItemLabel dijitPopupMenuItem alfresco-menus-AlfMenuBarPopup" data-dojo-attach-point="focusNode" role="menuitem" tabindex="-1" id="HEADER_USER_MENU_POPUP" aria-label="Joseph Ronaldson Belizaire " widgetid="HEADER_USER_MENU_POPUP" aria-haspopup="true" style="user-select: none;"&gt;...&lt;/div&gt; is not clickable at point (1160, 14). Other element would receive the click: &lt;div class="mask" id="template_x002e_datalists_x002e_data-lists_x0023_default-newList-dialog_mask" style="z-index: 3; height: 700px; width: 1519px; display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=111.0.5563.65)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00C7DCE3]
+	(No symbol) [0x00C139D1]
+	(No symbol) [0x00B24DA8]
+	(No symbol) [0x00B552EA]
+	(No symbol) [0x00B53BBA]
+	(No symbol) [0x00B51EFB]
+    [ Message content over the limit has been removed. ]
+	(No symbol) [0x00B510D6]
+	(No symbol) [0x00B48D05]
+	(No symbol) [0x00B6AECC]
+	(No symbol) [0x00B48726]
+	(No symbol) [0x00B6B224]
+	(No symbol) [0x00B7D57C]
+	(No symbol) [0x00B6ACC6]
+	(No symbol) [0x00B46F68]
+	(No symbol) [0x00B480CD]
+	GetHandleVerifier [0x00EF3832+2506274]
+	GetHandleVerifier [0x00F29794+2727300]
+	GetHandleVerifier [0x00F2E36C+2746716]
+	GetHandleVerifier [0x00D26690+617600]
+	(No symbol) [0x00C1C712]
+	(No symbol) [0x00C21FF8]
+	(No symbol) [0x00C220DB]
+	(No symbol) [0x00C2C63B]
+	BaseThreadInitThunk [0x768D7D69+25]
+	RtlInitializeExceptionChain [0x775AB74B+107]
+	RtlClearBits [0x775AB6CF+191]</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Evenement invalide">Evenement invalide</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

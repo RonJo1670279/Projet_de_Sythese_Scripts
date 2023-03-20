@@ -1,0 +1,23 @@
+Titre	Texte	Tags
+${Empty}	12345789	More
+ACRUSDA	12345789	Quick
+ACRUSDA	Un test	More
+@#$%^	${Empty}	Quick
+${Empty}	Ceci est @ la maison ce soir	Quick
+@#$%^	Un test	Slow
+S2334	${Empty}	Slow
+S2334	12345789	More
+${Empty}	Un test	Slow
+ACRUSDA	${Empty}	Slow
+Texte1	Un test	Quick
+${Empty}	${Empty}	More
+Texte1	${Empty}	More
+@#$%^	Ceci est @ la maison ce soir	More
+@#$%^	12345789	Slow
+S2334	Un test	Quick
+Texte1	Ceci est @ la maison ce soir	Slow
+Texte1	12345789	Slow
+S2334	Ceci est @ la maison ce soir	More
+ACRUSDA	Ceci est @ la maison ce soir	Quick
+
+

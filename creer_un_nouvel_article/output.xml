@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230228 12:51:11.979" rpa="false" schemaversion="3">
+<suite id="s1" name="Creer Un Nouvel Article Exception" source="c:\Users\Ronny\creer_un_nouvel_article\script\creer_un_nouvel_article_exception.robot">
+<kw name="Open browser login and preconditions for nominal" library="Keywords" type="SETUP">
+<kw name="Login" library="Keywords">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<arg>${vUsername}</arg>
+<arg>${vPassword}</arg>
+<kw name="Set Selenium Timeout" library="Selenium2Library">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20230228 12:51:12.187" endtime="20230228 12:51:12.188"/>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<msg timestamp="20230228 12:51:12.188" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8087/share/page'.</msg>
+<status status="PASS" starttime="20230228 12:51:12.188" endtime="20230228 12:51:17.318"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230228 12:51:17.318" endtime="20230228 12:51:17.441"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_UserName}</arg>
+<arg>${vUsername}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:17.441" level="INFO">Typing text '1670279' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230228 12:51:17.441" endtime="20230228 12:51:17.504"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_Password}</arg>
+<arg>${vPassword}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:17.505" level="INFO">Typing text '12345678' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230228 12:51:17.505" endtime="20230228 12:51:17.592"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${btn_Login}</arg>
+<doc>Clicks button identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:17.593" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Connexion')]'.</msg>
+<status status="PASS" starttime="20230228 12:51:17.593" endtime="20230228 12:51:18.991"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${link_HeaderUserMenu}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 12:51:18.991" endtime="20230228 12:51:19.014"/>
+</kw>
+<status status="PASS" starttime="20230228 12:51:12.187" endtime="20230228 12:51:19.015"/>
+</kw>
+<status status="PASS" starttime="20230228 12:51:12.186" endtime="20230228 12:51:19.015"/>
+</kw>
+<test id="s1-t1" name="Test cases 1" line="21">
+<kw name="Créer un article dans un blog Exception" library="Keywords">
+<arg>${Empty}</arg>
+<arg>12345789</arg>
+<arg>More</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${link_Id_site}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:19.017" level="INFO">Clicking element '//span[@id="HEADER_SITES_MENU_text"]'.</msg>
+<status status="PASS" starttime="20230228 12:51:19.017" endtime="20230228 12:51:19.063"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${link_site_nom_p1}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 12:51:19.063" endtime="20230228 12:51:19.302"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${link_site_nom_p1}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:19.302" level="INFO">Clicking element '//td[@id='HEADER_SITES_MENU_RECENT_bois-de-boulogne_text']//a[@title='Bois de boulogne'][normalize-space()='Bois de boulogne']'.</msg>
+<status status="PASS" starttime="20230228 12:51:19.302" endtime="20230228 12:51:20.187"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${lnk_blog}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:20.187" level="INFO">Clicking element 'xpath=//a[@class='alfresco-navigation-_HtmlAnchorMixin' and text()='Blog']'.</msg>
+<status status="PASS" starttime="20230228 12:51:20.187" endtime="20230228 12:51:20.858"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_nveauArticle}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:20.859" level="INFO">Clicking element 'xpath=//button[@id='template_x002e_toolbar_x002e_blog-postlist_x0023_default-create-button-button']'.</msg>
+<status status="PASS" starttime="20230228 12:51:20.858" endtime="20230228 12:51:21.494"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_titre}</arg>
+<arg>${vTitre}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:21.494" level="INFO">Typing text '' into text field 'xpath=//input[@id='template_x002e_postedit_x002e_blog-postedit_x0023_default-title']'.</msg>
+<status status="PASS" starttime="20230228 12:51:21.494" endtime="20230228 12:51:21.562"/>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<arg>id:template_x002e_postedit_x002e_blog-postedit_x0023_default-content_ifr</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230228 12:51:21.563" level="INFO">Selecting frame 'id:template_x002e_postedit_x002e_blog-postedit_x0023_default-content_ifr'.</msg>
+<status status="PASS" starttime="20230228 12:51:21.562" endtime="20230228 12:51:21.586"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>id:tinymce</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:21.586" level="INFO">Clicking element 'id:tinymce'.</msg>
+<status status="PASS" starttime="20230228 12:51:21.586" endtime="20230228 12:51:21.660"/>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<arg>id:tinymce</arg>
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230228 12:51:21.661" endtime="20230228 12:51:21.696"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id:tinymce</arg>
+<arg>${vContenu}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:21.696" level="INFO">Typing text '12345789' into text field 'id:tinymce'.</msg>
+<status status="PASS" starttime="20230228 12:51:21.696" endtime="20230228 12:51:21.761"/>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230228 12:51:21.761" endtime="20230228 12:51:21.764"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${text_tag}</arg>
+<arg>${vTags}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:21.764" level="INFO">Typing text 'More' into text field 'xpath=//input[@id='template_x002e_postedit_x002e_blog-postedit_x0023_default-tag-input-field']'.</msg>
+<status status="PASS" starttime="20230228 12:51:21.764" endtime="20230228 12:51:21.839"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${btn_publier_blog}</arg>
+<doc>Clicks button identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:21.840" level="INFO">Clicking button 'xpath=//button[@id='template_x002e_postedit_x002e_blog-postedit_x0023_default-publish-button-button']'.</msg>
+<status status="PASS" starttime="20230228 12:51:21.839" endtime="20230228 12:51:21.894"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230228 12:51:26.895" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230228 12:51:21.894" endtime="20230228 12:51:26.895"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_titre}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 12:51:26.896" endtime="20230228 12:51:26.911"/>
+</kw>
+<status status="PASS" starttime="20230228 12:51:19.016" endtime="20230228 12:51:26.911"/>
+</kw>
+<status status="PASS" starttime="20230228 12:51:19.015" endtime="20230228 12:51:26.912"/>
+</test>
+<test id="s1-t2" name="Test cases 2" line="23">
+<kw name="Créer un article dans un blog Exception" library="Keywords">
+<arg>${Empty}</arg>
+<arg>Ceci est @ la maison ce soir</arg>
+<arg>Quick</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${link_Id_site}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:26.915" level="INFO">Clicking element '//span[@id="HEADER_SITES_MENU_text"]'.</msg>
+<status status="PASS" starttime="20230228 12:51:26.915" endtime="20230228 12:51:26.956"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${link_site_nom_p1}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 12:51:26.957" endtime="20230228 12:51:27.181"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${link_site_nom_p1}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:27.182" level="INFO">Clicking element '//td[@id='HEADER_SITES_MENU_RECENT_bois-de-boulogne_text']//a[@title='Bois de boulogne'][normalize-space()='Bois de boulogne']'.</msg>
+<status status="PASS" starttime="20230228 12:51:27.181" endtime="20230228 12:51:27.830"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${lnk_blog}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:27.830" level="INFO">Clicking element 'xpath=//a[@class='alfresco-navigation-_HtmlAnchorMixin' and text()='Blog']'.</msg>
+<status status="PASS" starttime="20230228 12:51:27.830" endtime="20230228 12:51:28.348"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_nveauArticle}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:28.349" level="INFO">Clicking element 'xpath=//button[@id='template_x002e_toolbar_x002e_blog-postlist_x0023_default-create-button-button']'.</msg>
+<status status="PASS" starttime="20230228 12:51:28.348" endtime="20230228 12:51:28.727"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_titre}</arg>
+<arg>${vTitre}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:28.728" level="INFO">Typing text '' into text field 'xpath=//input[@id='template_x002e_postedit_x002e_blog-postedit_x0023_default-title']'.</msg>
+<status status="PASS" starttime="20230228 12:51:28.728" endtime="20230228 12:51:28.811"/>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<arg>id:template_x002e_postedit_x002e_blog-postedit_x0023_default-content_ifr</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230228 12:51:28.812" level="INFO">Selecting frame 'id:template_x002e_postedit_x002e_blog-postedit_x0023_default-content_ifr'.</msg>
+<status status="PASS" starttime="20230228 12:51:28.812" endtime="20230228 12:51:28.831"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>id:tinymce</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:28.832" level="INFO">Clicking element 'id:tinymce'.</msg>
+<status status="PASS" starttime="20230228 12:51:28.831" endtime="20230228 12:51:28.916"/>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<arg>id:tinymce</arg>
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230228 12:51:28.916" endtime="20230228 12:51:28.953"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id:tinymce</arg>
+<arg>${vContenu}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:28.954" level="INFO">Typing text 'Ceci est @ la maison ce soir' into text field 'id:tinymce'.</msg>
+<status status="PASS" starttime="20230228 12:51:28.953" endtime="20230228 12:51:29.042"/>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230228 12:51:29.042" endtime="20230228 12:51:29.044"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${text_tag}</arg>
+<arg>${vTags}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:29.045" level="INFO">Typing text 'Quick' into text field 'xpath=//input[@id='template_x002e_postedit_x002e_blog-postedit_x0023_default-tag-input-field']'.</msg>
+<status status="PASS" starttime="20230228 12:51:29.044" endtime="20230228 12:51:29.116"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${btn_publier_blog}</arg>
+<doc>Clicks button identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:29.116" level="INFO">Clicking button 'xpath=//button[@id='template_x002e_postedit_x002e_blog-postedit_x0023_default-publish-button-button']'.</msg>
+<status status="PASS" starttime="20230228 12:51:29.116" endtime="20230228 12:51:29.170"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230228 12:51:34.171" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230228 12:51:29.170" endtime="20230228 12:51:34.171"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_titre}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 12:51:34.171" endtime="20230228 12:51:34.186"/>
+</kw>
+<status status="PASS" starttime="20230228 12:51:26.914" endtime="20230228 12:51:34.187"/>
+</kw>
+<status status="PASS" starttime="20230228 12:51:26.913" endtime="20230228 12:51:34.187"/>
+</test>
+<test id="s1-t3" name="Test cases 3" line="25">
+<kw name="Créer un article dans un blog Exception" library="Keywords">
+<arg>${Empty}</arg>
+<arg>Un test</arg>
+<arg>Slow</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${link_Id_site}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:34.190" level="INFO">Clicking element '//span[@id="HEADER_SITES_MENU_text"]'.</msg>
+<status status="PASS" starttime="20230228 12:51:34.189" endtime="20230228 12:51:34.228"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${link_site_nom_p1}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 12:51:34.229" endtime="20230228 12:51:34.452"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${link_site_nom_p1}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:34.452" level="INFO">Clicking element '//td[@id='HEADER_SITES_MENU_RECENT_bois-de-boulogne_text']//a[@title='Bois de boulogne'][normalize-space()='Bois de boulogne']'.</msg>
+<status status="PASS" starttime="20230228 12:51:34.452" endtime="20230228 12:51:35.036"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${lnk_blog}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:35.037" level="INFO">Clicking element 'xpath=//a[@class='alfresco-navigation-_HtmlAnchorMixin' and text()='Blog']'.</msg>
+<status status="PASS" starttime="20230228 12:51:35.036" endtime="20230228 12:51:35.420"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_nveauArticle}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:35.421" level="INFO">Clicking element 'xpath=//button[@id='template_x002e_toolbar_x002e_blog-postlist_x0023_default-create-button-button']'.</msg>
+<status status="PASS" starttime="20230228 12:51:35.420" endtime="20230228 12:51:35.789"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_titre}</arg>
+<arg>${vTitre}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:35.789" level="INFO">Typing text '' into text field 'xpath=//input[@id='template_x002e_postedit_x002e_blog-postedit_x0023_default-title']'.</msg>
+<status status="PASS" starttime="20230228 12:51:35.789" endtime="20230228 12:51:35.842"/>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<arg>id:template_x002e_postedit_x002e_blog-postedit_x0023_default-content_ifr</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230228 12:51:35.842" level="INFO">Selecting frame 'id:template_x002e_postedit_x002e_blog-postedit_x0023_default-content_ifr'.</msg>
+<status status="PASS" starttime="20230228 12:51:35.842" endtime="20230228 12:51:35.865"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>id:tinymce</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:35.866" level="INFO">Clicking element 'id:tinymce'.</msg>
+<status status="PASS" starttime="20230228 12:51:35.866" endtime="20230228 12:51:35.936"/>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<arg>id:tinymce</arg>
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230228 12:51:35.936" endtime="20230228 12:51:35.971"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id:tinymce</arg>
+<arg>${vContenu}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:35.972" level="INFO">Typing text 'Un test' into text field 'id:tinymce'.</msg>
+<status status="PASS" starttime="20230228 12:51:35.971" endtime="20230228 12:51:36.037"/>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230228 12:51:36.037" endtime="20230228 12:51:36.039"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${text_tag}</arg>
+<arg>${vTags}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:36.040" level="INFO">Typing text 'Slow' into text field 'xpath=//input[@id='template_x002e_postedit_x002e_blog-postedit_x0023_default-tag-input-field']'.</msg>
+<status status="PASS" starttime="20230228 12:51:36.039" endtime="20230228 12:51:36.111"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${btn_publier_blog}</arg>
+<doc>Clicks button identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:36.111" level="INFO">Clicking button 'xpath=//button[@id='template_x002e_postedit_x002e_blog-postedit_x0023_default-publish-button-button']'.</msg>
+<status status="PASS" starttime="20230228 12:51:36.111" endtime="20230228 12:51:36.162"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230228 12:51:41.164" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230228 12:51:36.163" endtime="20230228 12:51:41.164"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_titre}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 12:51:41.164" endtime="20230228 12:51:41.177"/>
+</kw>
+<status status="PASS" starttime="20230228 12:51:34.189" endtime="20230228 12:51:41.177"/>
+</kw>
+<status status="PASS" starttime="20230228 12:51:34.188" endtime="20230228 12:51:41.178"/>
+</test>
+<test id="s1-t4" name="Test cases 4" line="27">
+<kw name="Créer un article dans un blog Exception" library="Keywords">
+<arg>${Empty}</arg>
+<arg>${Empty}</arg>
+<arg>More</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${link_Id_site}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:41.182" level="INFO">Clicking element '//span[@id="HEADER_SITES_MENU_text"]'.</msg>
+<status status="PASS" starttime="20230228 12:51:41.182" endtime="20230228 12:51:41.223"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${link_site_nom_p1}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 12:51:41.223" endtime="20230228 12:51:41.446"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${link_site_nom_p1}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:41.446" level="INFO">Clicking element '//td[@id='HEADER_SITES_MENU_RECENT_bois-de-boulogne_text']//a[@title='Bois de boulogne'][normalize-space()='Bois de boulogne']'.</msg>
+<status status="PASS" starttime="20230228 12:51:41.446" endtime="20230228 12:51:42.118"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${lnk_blog}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:42.118" level="INFO">Clicking element 'xpath=//a[@class='alfresco-navigation-_HtmlAnchorMixin' and text()='Blog']'.</msg>
+<status status="PASS" starttime="20230228 12:51:42.118" endtime="20230228 12:51:42.571"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_nveauArticle}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:42.572" level="INFO">Clicking element 'xpath=//button[@id='template_x002e_toolbar_x002e_blog-postlist_x0023_default-create-button-button']'.</msg>
+<status status="PASS" starttime="20230228 12:51:42.572" endtime="20230228 12:51:42.977"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_titre}</arg>
+<arg>${vTitre}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:42.977" level="INFO">Typing text '' into text field 'xpath=//input[@id='template_x002e_postedit_x002e_blog-postedit_x0023_default-title']'.</msg>
+<status status="PASS" starttime="20230228 12:51:42.977" endtime="20230228 12:51:43.033"/>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<arg>id:template_x002e_postedit_x002e_blog-postedit_x0023_default-content_ifr</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230228 12:51:43.034" level="INFO">Selecting frame 'id:template_x002e_postedit_x002e_blog-postedit_x0023_default-content_ifr'.</msg>
+<status status="PASS" starttime="20230228 12:51:43.034" endtime="20230228 12:51:43.054"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>id:tinymce</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:43.054" level="INFO">Clicking element 'id:tinymce'.</msg>
+<status status="PASS" starttime="20230228 12:51:43.054" endtime="20230228 12:51:43.126"/>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<arg>id:tinymce</arg>
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230228 12:51:43.127" endtime="20230228 12:51:43.164"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id:tinymce</arg>
+<arg>${vContenu}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:43.165" level="INFO">Typing text '' into text field 'id:tinymce'.</msg>
+<status status="PASS" starttime="20230228 12:51:43.165" endtime="20230228 12:51:43.210"/>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230228 12:51:43.210" endtime="20230228 12:51:43.216"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${text_tag}</arg>
+<arg>${vTags}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:43.217" level="INFO">Typing text 'More' into text field 'xpath=//input[@id='template_x002e_postedit_x002e_blog-postedit_x0023_default-tag-input-field']'.</msg>
+<status status="PASS" starttime="20230228 12:51:43.216" endtime="20230228 12:51:43.288"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${btn_publier_blog}</arg>
+<doc>Clicks button identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:43.289" level="INFO">Clicking button 'xpath=//button[@id='template_x002e_postedit_x002e_blog-postedit_x0023_default-publish-button-button']'.</msg>
+<status status="PASS" starttime="20230228 12:51:43.288" endtime="20230228 12:51:43.338"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230228 12:51:48.338" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230228 12:51:43.338" endtime="20230228 12:51:48.338"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_titre}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 12:51:48.338" endtime="20230228 12:51:48.354"/>
+</kw>
+<status status="PASS" starttime="20230228 12:51:41.180" endtime="20230228 12:51:48.354"/>
+</kw>
+<status status="PASS" starttime="20230228 12:51:41.180" endtime="20230228 12:51:48.355"/>
+</test>
+<test id="s1-t5" name="Test cases 5" line="29">
+<kw name="Créer un article dans un blog Exception" library="Keywords">
+<arg>${Empty}</arg>
+<arg>${Empty}</arg>
+<arg>${Empty}</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${link_Id_site}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:48.358" level="INFO">Clicking element '//span[@id="HEADER_SITES_MENU_text"]'.</msg>
+<status status="PASS" starttime="20230228 12:51:48.358" endtime="20230228 12:51:48.404"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${link_site_nom_p1}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 12:51:48.404" endtime="20230228 12:51:48.627"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${link_site_nom_p1}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:48.627" level="INFO">Clicking element '//td[@id='HEADER_SITES_MENU_RECENT_bois-de-boulogne_text']//a[@title='Bois de boulogne'][normalize-space()='Bois de boulogne']'.</msg>
+<status status="PASS" starttime="20230228 12:51:48.627" endtime="20230228 12:51:49.200"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${lnk_blog}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:49.200" level="INFO">Clicking element 'xpath=//a[@class='alfresco-navigation-_HtmlAnchorMixin' and text()='Blog']'.</msg>
+<status status="PASS" starttime="20230228 12:51:49.200" endtime="20230228 12:51:49.585"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_nveauArticle}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:49.585" level="INFO">Clicking element 'xpath=//button[@id='template_x002e_toolbar_x002e_blog-postlist_x0023_default-create-button-button']'.</msg>
+<status status="PASS" starttime="20230228 12:51:49.585" endtime="20230228 12:51:50.071"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_titre}</arg>
+<arg>${vTitre}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:50.071" level="INFO">Typing text '' into text field 'xpath=//input[@id='template_x002e_postedit_x002e_blog-postedit_x0023_default-title']'.</msg>
+<status status="PASS" starttime="20230228 12:51:50.071" endtime="20230228 12:51:50.124"/>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<arg>id:template_x002e_postedit_x002e_blog-postedit_x0023_default-content_ifr</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230228 12:51:50.124" level="INFO">Selecting frame 'id:template_x002e_postedit_x002e_blog-postedit_x0023_default-content_ifr'.</msg>
+<status status="PASS" starttime="20230228 12:51:50.124" endtime="20230228 12:51:50.144"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>id:tinymce</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:50.144" level="INFO">Clicking element 'id:tinymce'.</msg>
+<status status="PASS" starttime="20230228 12:51:50.144" endtime="20230228 12:51:50.213"/>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<arg>id:tinymce</arg>
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230228 12:51:50.213" endtime="20230228 12:51:50.249"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id:tinymce</arg>
+<arg>${vContenu}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:50.249" level="INFO">Typing text '' into text field 'id:tinymce'.</msg>
+<status status="PASS" starttime="20230228 12:51:50.249" endtime="20230228 12:51:50.296"/>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230228 12:51:50.296" endtime="20230228 12:51:50.299"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${text_tag}</arg>
+<arg>${vTags}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:50.299" level="INFO">Typing text '' into text field 'xpath=//input[@id='template_x002e_postedit_x002e_blog-postedit_x0023_default-tag-input-field']'.</msg>
+<status status="PASS" starttime="20230228 12:51:50.299" endtime="20230228 12:51:50.360"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${btn_publier_blog}</arg>
+<doc>Clicks button identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:50.361" level="INFO">Clicking button 'xpath=//button[@id='template_x002e_postedit_x002e_blog-postedit_x0023_default-publish-button-button']'.</msg>
+<status status="PASS" starttime="20230228 12:51:50.360" endtime="20230228 12:51:50.408"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230228 12:51:55.409" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230228 12:51:50.408" endtime="20230228 12:51:55.409"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_titre}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 12:51:55.409" endtime="20230228 12:51:55.423"/>
+</kw>
+<status status="PASS" starttime="20230228 12:51:48.356" endtime="20230228 12:51:55.423"/>
+</kw>
+<status status="PASS" starttime="20230228 12:51:48.356" endtime="20230228 12:51:55.424"/>
+</test>
+<kw name="Logout" library="Keywords" type="TEARDOWN">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${link_HeaderUserMenu}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 12:51:55.425" endtime="20230228 12:51:55.443"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${link_HeaderUserMenu}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:55.443" level="INFO">Clicking element 'id=HEADER_USER_MENU_POPUP'.</msg>
+<status status="PASS" starttime="20230228 12:51:55.443" endtime="20230228 12:51:55.486"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${link_HeaderDeconnexion}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 12:51:55.486" endtime="20230228 12:51:55.508"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${link_HeaderDeconnexion}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230228 12:51:55.508" level="INFO">Clicking element 'id=HEADER_USER_MENU_LOGOUT_text'.</msg>
+<status status="PASS" starttime="20230228 12:51:55.508" endtime="20230228 12:51:55.572"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230228 12:51:55.573" endtime="20230228 12:51:57.788"/>
+</kw>
+<status status="PASS" starttime="20230228 12:51:55.425" endtime="20230228 12:51:57.789"/>
+</kw>
+<doc>Test nominal de deplacement d'un evenement en mode Semaine</doc>
+<status status="PASS" starttime="20230228 12:51:11.984" endtime="20230228 12:51:57.789"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Creer Un Nouvel Article Exception">Creer Un Nouvel Article Exception</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,79 @@
+Titre	Description	titreSite	Type
+Test1	Testnormale	bois-de-boulogne	Agenda d'événement
+Test1	quisais	bois-de-boulogne	 Carnet d'adresses
+Test1	where im I	bois-de-boulogne	Liste d'événements
+Test1	12323	bois-de-boulogne	Liste de contacts
+Evenement	quisais	bois-de-boulogne	Liste de contacts
+Evenement	where im I	bois-de-boulogne	Liste de publications
+Evenement	12323	bois-de-boulogne	Liste de tâches
+Evenement	${EMPTY} 	bois-de-boulogne	Liste de tâches (simples)
+Evenement	where im I	bois-de-boulogne	Agenda d'événement
+Evenement	12323	bois-de-boulogne	 Carnet d'adresses
+Evenement	Testnormale	bois-de-boulogne	Liste d'événements
+123456	where im I	bois-de-boulogne	Liste de tâches (avancées)
+123456	12323	bois-de-boulogne	Liste de tâches (simples)
+123456	J.cole fan	bois-de-boulogne	Ordre du jour
+123456	${EMPTY} 	bois-de-boulogne	${EMPTY}
+123456	Testnormale	bois-de-boulogne	Agenda d'événement
+123456	quisais	bois-de-boulogne	 Carnet d'adresses
+123456	where im I	bois-de-boulogne	Liste d'événements
+123456	12323	bois-de-boulogne	Liste de contacts
+123456	Testnormale	bois-de-boulogne	Liste de publications
+123456	quisais	bois-de-boulogne	Liste de tâches
+EVENEEMT	12323	bois-de-boulogne	${EMPTY}
+EVENEEMT	J.cole fan	bois-de-boulogne	Agenda d'événement
+EVENEEMT	${EMPTY} 	bois-de-boulogne	 Carnet d'adresses
+EVENEEMT	Testnormale	bois-de-boulogne	Liste d'événements
+EVENEEMT	quisais	bois-de-boulogne	Liste de contacts
+EVENEEMT	where im I	bois-de-boulogne	Liste de publications
+EVENEEMT	12323	bois-de-boulogne	Liste de tâches
+EVENEEMT	Testnormale	bois-de-boulogne	Liste de tâches (avancées)
+EVENEEMT	quisais	bois-de-boulogne	Liste de tâches (simples)
+EVENEEMT	where im I	bois-de-boulogne	Ordre du jour
+#@$%$#%#$	J.cole fan	bois-de-boulogne	Liste d'événements
+#@$%$#%#$	${EMPTY} 	bois-de-boulogne	Liste de contacts
+#@$%$#%#$	Testnormale	bois-de-boulogne	Liste de publications
+#@$%$#%#$	quisais	bois-de-boulogne	Liste de tâches
+#@$%$#%#$	where im I	bois-de-boulogne	Liste de tâches (avancées)
+#@$%$#%#$	12323	bois-de-boulogne	Liste de tâches (simples)
+#@$%$#%#$	Testnormale	bois-de-boulogne	Ordre du jour
+#@$%$#%#$	quisais	bois-de-boulogne	${EMPTY}
+#@$%$#%#$	where im I	bois-de-boulogne	Agenda d'événement
+#@$%$#%#$	12323	bois-de-boulogne	 Carnet d'adresses
+#@ret123	${EMPTY} 	bois-de-boulogne	Liste de tâches
+#@ret123	Testnormale	bois-de-boulogne	Liste de tâches (avancées)
+#@ret123	quisais	bois-de-boulogne	Liste de tâches (simples)
+#@ret123	where im I	bois-de-boulogne	Ordre du jour
+#@ret123	12323	bois-de-boulogne	${EMPTY}
+#@ret123	Testnormale	bois-de-boulogne	Agenda d'événement
+#@ret123	quisais	bois-de-boulogne	 Carnet d'adresses
+#@ret123	where im I	bois-de-boulogne	Liste d'événements
+#@ret123	12323	bois-de-boulogne	Liste de contacts
+#@ret123	J.cole fan	bois-de-boulogne	Liste de publications
+${EMPTY}	Testnormale	bois-de-boulogne	Ordre du jour
+${EMPTY}	quisais	bois-de-boulogne	${EMPTY}
+${EMPTY}	where im I	bois-de-boulogne	Agenda d'événement
+${EMPTY}	12323	bois-de-boulogne	 Carnet d'adresses
+${EMPTY}	Testnormale	bois-de-boulogne	Liste d'événements
+${EMPTY}	quisais	bois-de-boulogne	Liste de contacts
+${EMPTY}	where im I	bois-de-boulogne	Liste de publications
+${EMPTY}	12323	bois-de-boulogne	Liste de tâches
+${EMPTY}	J.cole fan	bois-de-boulogne	Liste de tâches (avancées)
+${EMPTY}	${EMPTY} 	bois-de-boulogne	Liste de tâches (simples)
+Test1	Testnormale	bois-de-boulogne	Liste de publications
+Test1	quisais	bois-de-boulogne	Liste de tâches
+Test1	where im I	bois-de-boulogne	Liste de tâches (avancées)
+Test1	12323	bois-de-boulogne	Liste de tâches (simples)
+Test1	J.cole fan	bois-de-boulogne	Ordre du jour
+Test1	${EMPTY} 	bois-de-boulogne	${EMPTY}
+Evenement	Testnormale	bois-de-boulogne	Liste de tâches (avancées)
+Evenement	where im I	bois-de-boulogne	Ordre du jour
+Evenement	12323	bois-de-boulogne	${EMPTY}
+Evenement	J.cole fan	bois-de-boulogne	Agenda d'événement
+Evenement	${EMPTY} 	bois-de-boulogne	 Carnet d'adresses
+123456	Testnormale	bois-de-boulogne	Ordre du jour
+123456	quisais	bois-de-boulogne	${EMPTY}
+123456	where im I	bois-de-boulogne	Agenda d'événement
+123456	12323	bois-de-boulogne	 Carnet d'adresses
+123456	J.cole fan	bois-de-boulogne	Liste d'événements
+123456	${EMPTY} 	bois-de-boulogne	Liste de contacts

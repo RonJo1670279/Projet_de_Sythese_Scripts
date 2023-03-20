@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230319 17:10:29.217" rpa="false" schemaversion="3">
+<suite id="s1" name="Deplace Evenment Semaine Valides" source="c:\Users\ronny\Déplacer_un_évènement_en_mode_semaine\Script\deplace_evenment_semaine_valides.robot">
+<kw name="Open browser login and preconditions for nominal" library="Keywords" type="SETUP">
+<kw name="Login" library="Keywords">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<arg>${vUsername}</arg>
+<arg>${vPassword}</arg>
+<kw name="Set Selenium Timeout" library="Selenium2Library">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20230319 17:10:29.532" endtime="20230319 17:10:29.532"/>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<msg timestamp="20230319 17:10:29.533" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8087/share/page'.</msg>
+<status status="PASS" starttime="20230319 17:10:29.532" endtime="20230319 17:10:35.267"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230319 17:10:35.267" endtime="20230319 17:10:35.384"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_UserName}</arg>
+<arg>${vUsername}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:35.385" level="INFO">Typing text '1670279' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230319 17:10:35.385" endtime="20230319 17:10:35.440"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_Password}</arg>
+<arg>${vPassword}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:35.441" level="INFO">Typing text '12345678' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230319 17:10:35.441" endtime="20230319 17:10:35.508"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${btn_Login}</arg>
+<doc>Clicks button identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:35.509" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Connexion')]'.</msg>
+<status status="PASS" starttime="20230319 17:10:35.508" endtime="20230319 17:10:36.756"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${link_HeaderUserMenu}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 17:10:36.756" endtime="20230319 17:10:36.778"/>
+</kw>
+<status status="PASS" starttime="20230319 17:10:29.531" endtime="20230319 17:10:36.779"/>
+</kw>
+<status status="PASS" starttime="20230319 17:10:29.531" endtime="20230319 17:10:36.779"/>
+</kw>
+<test id="s1-t1" name="Cas 1" line="22">
+<kw name="Créer un evenement et le deplacer par Semaine" library="Keywords">
+<arg>Testdevenement</arg>
+<arg>ChezPop</arg>
+<arg>Test#3</arg>
+<arg>1530</arg>
+<arg>2233</arg>
+<arg>123</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${lnk_Accueil}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:36.780" level="INFO">Clicking element 'xpath=//*[@id='HEADER_HOME_text']/a'.</msg>
+<status status="PASS" starttime="20230319 17:10:36.780" endtime="20230319 17:10:37.257"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${lnk_SiteCreer}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 17:10:37.257" endtime="20230319 17:10:37.294"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${lnk_SiteCreer}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:37.295" level="INFO">Clicking element '//a[@class='theme-color-1' and text()='Bois de boulogne']'.</msg>
+<status status="PASS" starttime="20230319 17:10:37.295" endtime="20230319 17:10:38.116"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${lnk_Calendrier}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:38.117" level="INFO">Clicking element 'xpath=//a[@class='alfresco-navigation-_HtmlAnchorMixin' and text()='Calendrier']'.</msg>
+<status status="PASS" starttime="20230319 17:10:38.116" endtime="20230319 17:10:38.739"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${lnk_Ajouter_un_Evenement}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:38.739" level="INFO">Clicking element '//button[@type='button' and text()='Ajouter un événement']'.</msg>
+<status status="PASS" starttime="20230319 17:10:38.739" endtime="20230319 17:10:38.800"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_Quoi}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 17:10:38.801" endtime="20230319 17:10:39.030"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_Quoi}</arg>
+<arg>${vQuoi}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:39.030" level="INFO">Typing text 'Testdevenement' into text field 'xpath=//input[@id='eventEditPanel-title']'.</msg>
+<status status="PASS" starttime="20230319 17:10:39.030" endtime="20230319 17:10:39.102"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_vOu}</arg>
+<arg>${vOu}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:39.103" level="INFO">Typing text 'ChezPop' into text field 'id=eventEditPanel-location'.</msg>
+<status status="PASS" starttime="20230319 17:10:39.102" endtime="20230319 17:10:39.186"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_vDescription}</arg>
+<arg>${vDescription}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:39.187" level="INFO">Typing text 'Test#3' into text field 'id=eventEditPanel-description'.</msg>
+<status status="PASS" starttime="20230319 17:10:39.187" endtime="20230319 17:10:39.264"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_vTimeDebut}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 17:10:39.265" endtime="20230319 17:10:39.281"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_vTimeDebut}</arg>
+<arg>${vTimeDebut}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:39.281" level="INFO">Typing text '1530' into text field '//input[@name='start']'.</msg>
+<status status="PASS" starttime="20230319 17:10:39.281" endtime="20230319 17:10:39.363"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_vTimeFin}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 17:10:39.363" endtime="20230319 17:10:39.381"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_vTimeFin}</arg>
+<arg>${vTimeFin}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:39.381" level="INFO">Typing text '2233' into text field '//input[@name='end']'.</msg>
+<status status="PASS" starttime="20230319 17:10:39.381" endtime="20230319 17:10:39.458"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_vtag}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 17:10:39.459" endtime="20230319 17:10:39.476"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_vtag}</arg>
+<arg>${vtag}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:39.477" level="INFO">Typing text '123' into text field '//input[@id='eventEditPanel-tag-input-field']'.</msg>
+<status status="PASS" starttime="20230319 17:10:39.477" endtime="20230319 17:10:39.550"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_Ajouter}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 17:10:39.550" endtime="20230319 17:10:39.574"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_Ajouter}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:39.575" level="INFO">Clicking element '//button[@id='eventEditPanel-add-tag-button-button']'.</msg>
+<status status="PASS" starttime="20230319 17:10:39.574" endtime="20230319 17:10:39.606"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_Enregistrer}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:39.606" level="INFO">Clicking element '//button[@id='eventEditPanel-ok-button']'.</msg>
+<status status="PASS" starttime="20230319 17:10:39.606" endtime="20230319 17:10:39.649"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_Semaine}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 17:10:39.649" endtime="20230319 17:10:39.665"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_Semaine}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:39.665" level="INFO">Clicking element '//button[.= 'Semaine']'.</msg>
+<status status="PASS" starttime="20230319 17:10:39.665" endtime="20230319 17:10:39.771"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_afficher_evenment}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 17:10:39.771" endtime="20230319 17:10:39.997"/>
+</kw>
+<kw name="Drag And Drop" library="Selenium2Library">
+<arg>${btn_afficher_evenment}</arg>
+<arg>${btn_afficher_evenment2}</arg>
+<doc>Drags element identified by ``locator`` into ``target`` element.</doc>
+<status status="PASS" starttime="20230319 17:10:39.997" endtime="20230319 17:10:40.579"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_Agenda}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:40.579" level="INFO">Clicking element '//button[text()='Agenda']'.</msg>
+<status status="PASS" starttime="20230319 17:10:40.579" endtime="20230319 17:10:41.007"/>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<arg>${btn_option}</arg>
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<msg timestamp="20230319 17:10:41.008" level="INFO">Simulating Mouse Over on element '//td[@class='yui-dt1-col-actions yui-dt-col-actions yui-dt-last']'.</msg>
+<status status="PASS" starttime="20230319 17:10:41.008" endtime="20230319 17:10:41.281"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_supprimer}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 17:10:41.281" endtime="20230319 17:10:41.297"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_supprimer}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:41.297" level="INFO">Clicking element '//div/a[@title='Supprimer' and @class='deleteAction']'.</msg>
+<status status="PASS" starttime="20230319 17:10:41.297" endtime="20230319 17:10:41.346"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${alrt_supprimer}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 17:10:41.347" endtime="20230319 17:10:41.373"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_confirmer_supprimer}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:41.373" level="INFO">Clicking element '//span/span/span/button[text()='Supprimer']'.</msg>
+<status status="PASS" starttime="20230319 17:10:41.373" endtime="20230319 17:10:41.408"/>
+</kw>
+<status status="PASS" starttime="20230319 17:10:36.780" endtime="20230319 17:10:41.408"/>
+</kw>
+<status status="PASS" starttime="20230319 17:10:36.779" endtime="20230319 17:10:41.409"/>
+</test>
+<kw name="Logout" library="Keywords" type="TEARDOWN">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${link_HeaderUserMenu}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 17:10:41.412" endtime="20230319 17:10:41.428"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${link_HeaderUserMenu}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:41.428" level="INFO">Clicking element 'id=HEADER_USER_MENU_POPUP'.</msg>
+<status status="PASS" starttime="20230319 17:10:41.428" endtime="20230319 17:10:41.467"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${link_HeaderDeconnexion}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 17:10:41.467" endtime="20230319 17:10:41.488"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${link_HeaderDeconnexion}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 17:10:41.488" level="INFO">Clicking element 'id=HEADER_USER_MENU_LOGOUT_text'.</msg>
+<status status="PASS" starttime="20230319 17:10:41.488" endtime="20230319 17:10:41.526"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230319 17:10:41.526" endtime="20230319 17:10:43.735"/>
+</kw>
+<status status="PASS" starttime="20230319 17:10:41.412" endtime="20230319 17:10:43.735"/>
+</kw>
+<doc>Test nominal de deplacement d'un evenement en mode Semaine</doc>
+<status status="PASS" starttime="20230319 17:10:29.222" endtime="20230319 17:10:43.735"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Deplace Evenment Semaine Valides">Deplace Evenment Semaine Valides</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

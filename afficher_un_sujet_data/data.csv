@@ -1,0 +1,30 @@
+Titre	Texte	Tags
+Single	5012SFSA	Quick
+${EMPTY}	5012SFSA	Fat
+%#@$%%	${EMPTY}	SLim
+Single	Lui cest moi	Slow
+12345678	$%@#$%#$%	${EMPTY}
+Sp@n	$%@#$%#$%	Slow
+%#@$%%	112454	Quick
+Sp@n	Lui cest moi	SLim
+%#@$%%	5012SFSA	Slow
+12345678	${EMPTY}	Quick
+${EMPTY}	${EMPTY}	Slow
+%#@$%%	Lui cest moi	${EMPTY}
+${EMPTY}	Lui cest moi	Quick
+12345678	112454	Fat
+${EMPTY}	$%@#$%#$%	SLim
+Sp@n	${EMPTY}	${EMPTY}
+${EMPTY}	112454	Slow
+Sp@n	112454	Quick
+Sp@n	$%@#$%#$%	Fat
+Single	${EMPTY}	Fat
+Single	112454	${EMPTY}
+12345678	5012SFSA	Slow
+Sp@n	5012SFSA	${EMPTY}
+12345678	Lui cest moi	Fat
+${EMPTY}	$%@#$%#$%	${EMPTY}
+Single	$%@#$%#$%	Quick
+Single	112454	SLim
+12345678	5012SFSA	SLim
+%#@$%%	$%@#$%#$%	Fat
